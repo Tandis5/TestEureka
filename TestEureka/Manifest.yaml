@@ -1,0 +1,14 @@
+﻿---
+applications:
+- name: TestEureka
+  disk_quota: 768M
+  memory: 512M
+  instances: 1
+  stack: cflinuxfs3
+  no-route: true
+  health-check-type: process
+  services:
+   - ConfigurationServer
+   - DiscoveryServer
+  buildpacks:
+   - dotnet_core_buildpack
